@@ -48,11 +48,19 @@
         li.className = 'list-item';
         return li;
       }
+
       // TODO: register event onclick / addEventListener untuk button
       // akan menjalankan fungsi fnClickHandler
-      
+      button.addEventListener('click', () => {
+        const isi = input.value;
+        fnClickHandler(isi);
+        input.value = "";
+      })
+
+
       // TODO: register event onkeypress / addEventListener untuk input
       // sehingga saat di input ditekan enter akan menjalankan fungsi fnClickHandler juga
+      
     </script>
   </body>
 </html>
