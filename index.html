@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challenge - DOM</title>
   </head>
-  <body>
-    <div id="app">
+  <body bgcolor="#92B4EC">
+    <center>
+    <div id="app" 
+      style="max-width:400px; margin:25px; padding:25px; background-color:#FFE69A; 
+      border-radius:25px;">
       <!-- TODO: Buatlah sebuah header dengan id todo-title -->
-      <header id="todo-title">To-Do List</header>
+      <header id="todo-title"><h2>To-Do List</h2></header>
       <!-- TODO: Buatlah sebuah subtitle dengan id todo-subtitle -->
-      <subtitle id="todo-subtitle">~ Today's List ~</subtitle>
+      <subtitle id="todo-subtitle"><h3>~ Today's List ~</h3></subtitle>
 
       <!-- Section: input -->
       <section>
@@ -22,7 +25,7 @@
       </section>
 
       <!-- Section output -->
-      <section>
+      <section style="text-align:left;">
       <!-- TODO: Buatlah sebuah <ul> dengan id todo-output -->
         <ul id="todo-output"></ul>
       </section>
@@ -40,14 +43,14 @@
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
       function fnClickHandler(toDoItem) {
         output.appendChild(createList(toDoItem));
-      }
+      };
 
       function createList(name){
         let li = document.createElement('li');
         li.textContent = name;
         li.className = 'list-item';
         return li;
-      }
+      };
 
       // TODO: register event onclick / addEventListener untuk button
       // akan menjalankan fungsi fnClickHandler
@@ -66,7 +69,9 @@
           fnClickHandler(isi);
           input.value = "";
         }
-      })
+      });
+
     </script>
+    </center>
   </body>
 </html>
